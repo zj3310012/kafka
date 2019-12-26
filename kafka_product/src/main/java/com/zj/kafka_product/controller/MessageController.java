@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zj.kafka_product.model.user.User;
+import com.zj.kafka_product.model.order.Order;
 
 @RestController
 public class MessageController {
@@ -15,8 +15,8 @@ public class MessageController {
 	private KafkaTemplate<String, Object> kafkaTemplate;
 
 	@PostMapping("/message/send")
-	public boolean send(@RequestBody User user) {
-		kafkaTemplate.send("zj", user);
+	public boolean send(@RequestBody Order order) {
+		kafkaTemplate.send("zj", order);
 		return true;
 	}
 }

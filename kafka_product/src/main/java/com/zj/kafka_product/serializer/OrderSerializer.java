@@ -4,9 +4,9 @@ import java.util.Map;
 
 import org.apache.kafka.common.serialization.Serializer;
 
-import com.zj.kafka_product.model.user.User;
+import com.zj.kafka_product.model.order.Order;
 
-public class UserSerializer implements Serializer<User>{
+public class OrderSerializer implements Serializer<Order>{
 
 	@Override
 	public void close() {
@@ -21,8 +21,8 @@ public class UserSerializer implements Serializer<User>{
 	}
 
 	@Override
-	public byte[] serialize(String arg0, User user) {
-		return user.encode();
+	public byte[] serialize(String arg0, Order order) {
+		return order.encode();
 	}
 
 }
