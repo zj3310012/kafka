@@ -43,7 +43,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>../kafka_consumer</module>
-		<module>../kafka_product</module>
+		<module>kafka_consumer</module>
+		<module>kafka_product</module>
 	</modules>
 </project>
